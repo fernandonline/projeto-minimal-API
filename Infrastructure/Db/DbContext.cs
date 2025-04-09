@@ -27,7 +27,7 @@ public class DbContexto : DbContext
     {  
         if(!optionsBuilder.IsConfigured)
         {
-            var StringConexao = _configAppSettings.GetConnectionString("mysql")?.ToString();
+            var StringConexao = _configAppSettings.GetConnectionString("MySql")?.ToString();
             if(!string.IsNullOrEmpty(StringConexao))
             {
                 optionsBuilder.UseMySql(StringConexao, ServerVersion.AutoDetect(StringConexao));
